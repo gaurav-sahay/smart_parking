@@ -1,22 +1,25 @@
 package org.testing_declarative_services_consumer;
 
 import org.apache.felix.scr.annotations.Component;
+import org.apache.felix.scr.annotations.Property;
 import org.apache.felix.scr.annotations.Reference;
-import org.testing_declarative_services.FirstService;
+import org.testing_declarative_service_api.FirstServiceApi;
 
-@Component
+@Component(name="Declarative Consumer Service")
 public class ConsumerService {
+	@Property(name="consumer service")
+	@Reference(bind="setFirstService",unbind="unsetFirstService",referenceInterface=FirstServiceApi.class)
+	private FirstServiceApi firstServiceApi;
 	
-	@Reference(bind="setFirstService",unbind="unsetFirstService",referenceInterface=FirstService.class)
-	private FirstService firstService;
-	
-	protected void setFirstService(FirstService firstService){
+	protected void setFirstService(FirstServiceApi firstServiceApi){
+		this.firstServiceApi = firstServiceApi;
 		System.out.println("Setting the service ");
-		firstService.sayHello();
+		this.firstServiceApi.sayHello();
 	}
 	
-	protected void unsetFirstService(FirstService firstService){
-		firstService.sayByeBye();
+	protected void unsetFirstService(FirstServiceApi firstServiceApi){
+		this.firstServiceApi.sayByeBye();
+		this.firstServiceApi =  null;
 	}
 	
 	

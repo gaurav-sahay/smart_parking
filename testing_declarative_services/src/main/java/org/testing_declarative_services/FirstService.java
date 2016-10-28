@@ -5,10 +5,11 @@ import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Deactivate;
 import org.apache.felix.scr.annotations.Service;
 import org.osgi.service.component.ComponentContext;
+import org.testing_declarative_service_api.FirstServiceApi;
 
-@Component(immediate=true)
-@Service(value=FirstService.class)
-public class FirstService {
+@Component
+@Service(value=FirstServiceApi.class)
+public class FirstService implements FirstServiceApi{
 
 
 	@Activate
@@ -21,9 +22,11 @@ public class FirstService {
 		System.out.println("Bye Bye !");
 	}
 	
+	@Override
 	public void sayHello(){
 		System.out.println("Hello world ! :)");
 	}
+	@Override
 	public void sayByeBye(){
 		System.out.println("Bye Bye World ! :(");
 	}

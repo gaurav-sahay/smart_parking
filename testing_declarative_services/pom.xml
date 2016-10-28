@@ -36,8 +36,8 @@
 				<configuration>
 					<instructions>
 						<Bundle-Name>${project.name}</Bundle-Name>
-						<Bundle-SymbolicName>${project.artifcatId}</Bundle-SymbolicName>
-						<Export-Package>org.testing_declarative_services</Export-Package>
+						<Bundle-SymbolicName>Declarative_Impl</Bundle-SymbolicName>
+						<Export-Package></Export-Package>
 						<Import-Package>*</Import-Package>
 					</instructions>
 				</configuration>
@@ -73,6 +73,11 @@
 			<artifactId>org.apache.felix.scr.annotations</artifactId>
 			<version>1.9.6</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.bosch.smart.parking</groupId>
+			<artifactId>testing_declarative_service_api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
