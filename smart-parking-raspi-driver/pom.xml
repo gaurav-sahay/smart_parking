@@ -34,6 +34,7 @@
 				<version>3.2.0</version>
 				<extensions>true</extensions>
 				<configuration>
+					<obrRepository>NONE</obrRepository>
 					<instructions>
 						<Bundle-Name>${project.name}</Bundle-Name>
 						<Bundle-SymbolicName>${project.artifcatId}</Bundle-SymbolicName>
