@@ -36,8 +36,8 @@
 				<configuration>
 				<obrRepository>NONE</obrRepository>
 					<instructions>
-						<Bundle-Name>${project.name}</Bundle-Name>
-						<Bundle-SymbolicName>Declarative_Service_API</Bundle-SymbolicName>
+						<Bundle-Name>smart_parking</Bundle-Name>
+						<Bundle-SymbolicName>smart_parking</Bundle-SymbolicName>
 						<Export-Package>org.testing_declarative_service_api</Export-Package>
 						<Import-Package>*</Import-Package>
 					</instructions>
