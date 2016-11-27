@@ -87,5 +87,15 @@
 			<artifactId>testing_declarative_service_api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>org.bosch.smart.parking</groupId>
+			<artifactId>smart-parking-raspi-driver</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.0-b01</version>
+		</dependency>
 	</dependencies>
 </project>
