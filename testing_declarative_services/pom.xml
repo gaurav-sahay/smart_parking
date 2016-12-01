@@ -13,8 +13,8 @@
 	<packaging>bundle</packaging>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
+		<bundle.name>${project.name}</bundle.name>
+		<bundle.symbolicName>Declarative_Impl</bundle.symbolicName>
 	</properties>
 	<build>
 		<plugins>
@@ -36,8 +36,8 @@
 				<configuration>
 					<obrRepository>NONE</obrRepository>
 					<instructions>
-						<Bundle-Name>${project.name}</Bundle-Name>
-						<Bundle-SymbolicName>Declarative_Impl</Bundle-SymbolicName>
+						<Bundle-Name>${bundle.name}</Bundle-Name>
+						<Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
 						<Export-Package></Export-Package>
 						<Import-Package>*</Import-Package>
 					</instructions>
@@ -60,31 +60,9 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.osgi.core</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.osgi.compendium</artifactId>
-			<version>1.4.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.apache.felix.scr.annotations</artifactId>
-			<version>1.9.6</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.bosch.smart.parking</groupId>
 			<artifactId>testing_declarative_service_api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>

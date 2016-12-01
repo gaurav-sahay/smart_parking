@@ -13,8 +13,8 @@
 	<url>http://maven.apache.org</url>
 	<packaging>bundle</packaging>
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
+		<bundle.name>${project.name}</bundle.name>
+		<bundle.symbolicName>smart_parking</bundle.symbolicName>
 	</properties>
 	<build>
 		<plugins>
@@ -36,8 +36,8 @@
 				<configuration>
 				<obrRepository>NONE</obrRepository>
 					<instructions>
-						<Bundle-Name>smart_parking</Bundle-Name>
-						<Bundle-SymbolicName>smart_parking</Bundle-SymbolicName>
+						<Bundle-Name>${bundle.name}</Bundle-Name>
+						<Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
 						<Export-Package>org.testing_declarative_service_api</Export-Package>
 						<Import-Package>*</Import-Package>
 					</instructions>
@@ -46,11 +46,5 @@
 		</plugins>
 	</build>
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
 </project>

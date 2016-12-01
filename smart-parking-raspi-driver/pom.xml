@@ -13,8 +13,8 @@
 	<packaging>bundle</packaging>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
+		<bundle.name>${project.name}</bundle.name>
+		<bundle.symbolicName>smart-parking-raspi-driver</bundle.symbolicName>
 	</properties>
 	<build>
 		<plugins>
@@ -36,8 +36,8 @@
 				<configuration>
 					<obrRepository>NONE</obrRepository>
 					<instructions>
-						<Bundle-Name>smart-parking-raspi-driver</Bundle-Name>
-						<Bundle-SymbolicName>smart-parking-raspi-driver</Bundle-SymbolicName>
+						<Bundle-Name>${bundle.name}</Bundle-Name>
+						<Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
 						<Private-Package>org.smart.parking.raspi.driver</Private-Package>
 						<Bundle-ClassPath></Bundle-ClassPath>
 						<Bundle-Activator>org.smart.parking.raspi.driver.SmartParkingDriverRaspi</Bundle-Activator>
@@ -49,11 +49,7 @@
 		</plugins>
 	</build>
 	<dependencies>
-		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.osgi.core</artifactId>
-			<version>1.0.0</version>
-		</dependency>
+		
 		<dependency>
 			<groupId>com.pi4j</groupId>
 			<artifactId>pi4j-service</artifactId>
@@ -75,20 +71,9 @@
 			<version>2.24</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.osgi.compendium</artifactId>
-			<version>1.4.0</version>
-		</dependency>
-		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
 			<artifactId>jersey-container-servlet</artifactId>
 			<version>2.24</version>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>
