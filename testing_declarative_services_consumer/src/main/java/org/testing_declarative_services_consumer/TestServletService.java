@@ -24,7 +24,7 @@ public class TestServletService {
 		this.httpService = httpService;
 		LOG.info("Setting the httpservice");
 		Hashtable<String, String> props = new Hashtable<String, String>();
-		props.put("jersey.config.server.provider.packages", "org.smart.parking.raspi.driver.webService");
+		props.put("jersey.config.server.provider.packages", "org.smart.parking.raspi.driver.webService;org.smart.parking.raspi.test");
 		httpService.registerServlet("/hello/*", new ServletContainer(), props, null);
 	}
 	

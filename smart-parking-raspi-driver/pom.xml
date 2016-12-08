@@ -42,7 +42,7 @@
 						<Bundle-ClassPath></Bundle-ClassPath>
 						<Bundle-Activator>org.smart.parking.raspi.driver.SmartParkingDriverRaspi</Bundle-Activator>
 						<Import-Package>*</Import-Package>
-						<Export-Package>org.smart.parking.raspi.driver.webService,org.smart.parking.raspi.driver.to</Export-Package>
+						<Export-Package>org.smart.parking.raspi.driver.webService,org.smart.parking.raspi.driver.to,org.smart.parking.raspi.test</Export-Package>
 					</instructions>
 				</configuration>
 			</plugin>
