@@ -13,7 +13,7 @@ import org.glassfish.jersey.filter.LoggingFilter;
 
 public class RestClient {
 
-private static final String REST_URL = "http://10.170.22.93:8080/park/";
+private static final String REST_URL = "http://35.154.81.253:8080/park/";
 
 	public static void callRestWebService(String json) throws Exception{
 		Client client = ClientBuilder.newClient( new ClientConfig().register( LoggingFilter.class ) );
